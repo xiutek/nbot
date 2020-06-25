@@ -12,8 +12,7 @@ module.exports = {
 	.setTitle('¡Esta es la información que solicitaste! :bulb:')
 	.setDescription('Soy un robot :robot: que está constantemente atento a *comandos*. \r\n \r\nUn *comando* es una mensaje especial que puedes escribir en cualquier chat de texto.\r\nPara escribir un comando, inicia escrbiendo el símbolo `$` seguido de un `comando`.\r\nEnvía tu comando como mensaje al canal y si el comando existe, lo ejecutaré. :gear: \r\n \r\nPara ver todos los comandos disponibles, utiliza `$help`. Puedes utilizar el comando `$help` seguido de un comando para saber cómo utilizarlo, por ejemplo `$help ayuda` monstrará información sobre el comando ayuda. ')
   .addFields(
-    { name: ':grey_question: Comanandos de ayuda', value: '`$help`, `$ayuda tutorial`, `$ayuda discord`, `$ayuda tutor`, `$ayuda chat` ', inline: true },
-    { name: ':computer: Informática', value: '@Victor_Ugalde#4353', inline: true },
+    { name: ':grey_question: Comanandos de ayuda', value: '`$help`, `$ayuda tutorial`, `$ayuda discord`, `$ayuda tutor`, `$ayuda chat`, `$ayuda auido` ', inline: true },
 
   )
 	.setThumbnail('https://i.imgur.com/nFao1cI.jpeg')
@@ -73,16 +72,61 @@ module.exports = {
               const Discord = require('discord.js');
               const exampleEmbed = new Discord.MessageEmbed()
               .setColor('#5b34eb')
-            	.setTitle('¡Aquí está la información de los tutores! :bulb:')
+            	.setTitle('¡Aquí está la información de los canales de texto! :speech_balloon: ')
             	.setThumbnail('https://i.imgur.com/nFao1cI.jpeg')
             	.addFields(
+                { name: '\u200B', value: '= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =' },
+                { name: 'Categoría:', value: 'Salas de Texto Oficiales :loudspeaker: ' },
+                { name: ':rotating_light: ¡Revisa estos canales antes de iniciar!', value: '`#avisos`, `#reglamento`, `#chat-princial`, `#control-escolar`.', inline: true },
+                { name: '\u200B', value: '= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =' },
+                { name: 'Categoría:', value: 'Salas de Texto Sociales :star: ' },
+                { name: ':pencil: Clubs de Discusión', value: '`#club-de-ciencias`, `#club-de-artes`, `#club-de-lectura`, `#club-de-idimoas`, `#taller-de-escritura`.', inline: true },
+                { name: ':video_game: Salas de Jugos', value: '`#club-de-ciencias`, `#club-de-artes`, `#club-de-lectura`, `#club-de-idimoas`, `#taller-de-escritura`.', inline: true },
+                { name: '\u200B', value: '= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =' },
+                { name: 'Categoría:', value: 'Salas de Texto Académicas :book: ' },
                 { name: ':one: Primero', value: '`#español-i`, `#mate-i`, `#ética`, `#informática`, `#geografia`.', inline: true },
             		{ name: ':two: Segundo', value: '`#español-ii`, `#mate-ii`, `#ecología`, `#literatura`, `#biología`.', inline: true },
+                { name: ':three: Tercero', value: '`#mate-iii`, `#ciencias-sociales`, `#historia-moderna`, `#salud`, `#química`.', inline: true },
+                { name: ':four: Cuarto', value: '`#mate-iv`, `#física`, `#economía`, `#negocios`, `#administración`.', inline: true },
+                { name: ':flag_br:  Português', value: '`#comunicação`, `#tecnologia-da-informação`, `#matemática-financeira`, `#álgebra-básica`.', inline: true },
+                { name: ':flag_us: English Learning', value: '`#basic-english`, `#intermediate-english`, `#language-arts-i`, `#language-arts-iii`, `#literature`.', inline: true },
+                { name: ':flag_us: English Subjects', value: '`#math-i, ii, iii`, `#information-tech`, `#business-management`, `#economics`, `#geography`, `#environmental-st`, `#social-sciences`, `#modern-history`, `#ethics`', inline: true },
+                { name: ':art: Extracurriculares I', value: '`#java`, `#photoshop`, `#ilustrator`, `#autocad`, `#fotografía`, `#producción sonora`, `#moda`, `#música`.', inline: true },
+                { name: ':books: Extracurriculares II', value: '`#estrategias-de-búsqueda`, `#fisiología`, `#química-orgnánica`, `#socioeconomía`, `#historia-méxico`, `#arte-latinoamérica`, `#historia-latinoamérica`, `filosofía`.', inline: true },
+
 
             	)
-              .setDescription(':speech_balloon: Cada chat corresponde a una materia o a un espacio de contenido específico, como el chat de club-de-ciencias, club-de-lectura etc.\r\n Identifica las **materias** que estás cursando y revisa las opciones **extracurriculares**. Eres libre de entrar a los canales de chat de las extracurriculares aun si no te has inscrito en ellas.')
+              .setDescription('Cada chat corresponde a una materia o a un espacio de contenido específico, como el chat de club-de-ciencias, club-de-lectura etc. Identifica las **materias** que estás cursando y revisa las opciones **extracurriculares**. Eres libre de entrar a los canales de chat de las extracurriculares aun si no te has inscrito en ellas.')
             	.setTimestamp()
-            	.setFooter('*¡Los tutores resolveran todas tus dudas académicas en los #canales de texto de las materias!*');
+            	.setFooter('*¡Los tutores resolveran todas tus dudas académicas en los #canales de texto académicos y podrás chatear con tus compañeros en los canales sociales!*');
+
+              return message.channel.send(exampleEmbed);
+
+            }
+
+            if (args[0] === 'audio') {
+
+              const Discord = require('discord.js');
+              const exampleEmbed = new Discord.MessageEmbed()
+              .setColor('#5b34eb')
+            	.setTitle('¡Aquí está la información de los canales de audio! :speaker:')
+            	.setThumbnail('https://i.imgur.com/nFao1cI.jpeg')
+            	.addFields(
+                { name: '\u200B', value: '= = = = = = = = = = =' },
+                { name: 'Categoría:', value: 'Salas de Auido Sociales :star: ' },
+                { name: 'Sala:', value: ':speaker:`CLUB SOCIAL SALA 1`\r\n :speaker:`CLUB SOCIAL SALA 2`\r\n :speaker:`SALA DE JUEGOS 1`\r\n :speaker:`SALA DE JUEGOS 2`', inline: true },
+                { name: '\u200B', value: '= = = = = = = = = = =' },
+                { name: 'Categoría:', value: 'Salas de Audio Académicas :book: ' },
+                { name: 'Salas', value: ':speaker:`AULA 1`\r\n :speaker:`AULA 2`\r\n :speaker:`AULA 3`\r\n :speaker:`AULA 4`\r\n', inline: true },
+                { name: 'Salas', value: ':speaker:`AULA 5`\r\n :speaker:`AULA 6`\r\n :speaker:`AULA 7`\r\n :speaker:`AULA 8`\r\n :speaker:`AULA 9`\r\n ', inline: true },
+                { name: '\u200B', value: '= = = = = = = = = = =' },
+
+
+            	)
+              .setDescription('Cada bloque de materias tiene su propia AULA. Éstas sirven para interactuar en tiempo real con audio o videollamada. Sólo tienes que hacer clic en el AULA correspondiente, activar tu micrófono o cámara y automáticamente estarás en este espacio. \r\nLas AULAS se usan cuando los tutores dan una clase o para resolver dudas, reunirse en torno a algún tema o ejercicio y para compartir ideas. Cuando te encuentres en una llamada grupal, manten tu microfono silenciado. \r\n\r\n*Al final de este diálogo podras observar un ejemplo de una conexión exitosa a una sala de audio.*')
+              .setImage('https://i.imgur.com/1jMk5UX.png')
+              .setTimestamp()
+            	.setFooter('*Si no puedes conectarte a las salas de audio, escuchar o enviar sonido intenta el comando $ayuda audio+ para ver soluciones a problemas comunes.*');
 
               return message.channel.send(exampleEmbed);
 
