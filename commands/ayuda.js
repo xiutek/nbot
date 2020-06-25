@@ -1,6 +1,6 @@
 module.exports = {
     name: 'ayuda',
-    description: 'Muestra información de ayuda del servidor.\r\n\r\nArgumentos: (informacion solicitada). \r\ntutorial : *Información inicial sobre el bot y los comandos.*\r\n discord : *información sobre cómo utilizar Discord*\r\n otro : *shalala* \r\n\r\n*Por ejemplo* `$ayuda tutor` *resultará en un recuadro con información sobre los tutores*',
+    description: 'Muestra información de ayuda del servidor.\r\n\r\n**Argumentos:** *(informacion solicitada)* \r\n   - tutorial : *información inicial sobre el bot y los comandos*\r\n   - discord : *información sobre cómo utilizar Discord*\r\n   - tutor : *lista de tutores y forma de solicitar ayuda*\r\n   - admin : *solucion de dudas y problemas no académicos*\r\n   - chat : *información sobre los canales de texto*\r\n   - audio : *información sobre los canales de auido*\r\n   - audio+ : *solución a problemas de audio*\r\n   - radio : *utilización del radio (reproductor de música)*\r\n   - juegos : *información sobre las salas de juegos* \r\n\r\n*Por ejemplo* `$ayuda tutor` *resultará en un recuadro con información sobre los tutores*',
   args: true,
 
     execute(message, args) {
@@ -12,7 +12,7 @@ module.exports = {
 	.setTitle('¡Esta es la información que solicitaste! :bulb:')
 	.setDescription('Soy un robot :robot: que está constantemente atento a *comandos*. \r\n \r\nUn *comando* es una mensaje especial que puedes escribir en cualquier chat de texto.\r\nPara escribir un comando, inicia escrbiendo el símbolo `$` seguido de un `comando`.\r\nEnvía tu comando como mensaje al canal y si el comando existe, lo ejecutaré. :gear: \r\n \r\nPara ver todos los comandos disponibles, utiliza `$help`. Puedes utilizar el comando `$help` seguido de un comando para saber cómo utilizarlo, por ejemplo `$help ayuda` monstrará información sobre el comando ayuda. ')
   .addFields(
-    { name: ':grey_question: Comanandos de ayuda', value: '`$help`, `$ayuda tutorial`, `$ayuda discord`, `$ayuda tutor`, `$ayuda chat`, `$ayuda auido` ', inline: true },
+    { name: ':grey_question: Comanandos de ayuda', value: '`$help`, `$help ayuda`, `$ayuda tutorial`, `$ayuda discord`, `$ayuda tutor`, `$ayuda admin`,  `$ayuda chat`, `$ayuda auido`, `$ayuda audio+`, `$ayuda radio`, `$ayuda juegos` ', inline: true },
 
   )
 	.setThumbnail('https://i.imgur.com/nFao1cI.jpeg')
@@ -121,7 +121,6 @@ module.exports = {
                 { name: 'Salas', value: ':speaker:`AULA 5`\r\n :speaker:`AULA 6`\r\n :speaker:`AULA 7`\r\n :speaker:`AULA 8`\r\n :speaker:`AULA 9`\r\n ', inline: true },
                 { name: '\u200B', value: '= = = = = = = = = = =' },
 
-
             	)
               .setDescription('Cada bloque de materias tiene su propia AULA. Éstas sirven para interactuar en tiempo real con audio o videollamada. Sólo tienes que hacer clic en el AULA correspondiente, activar tu micrófono o cámara y automáticamente estarás en este espacio. \r\nLas AULAS se usan cuando los tutores dan una clase o para resolver dudas, reunirse en torno a algún tema o ejercicio y para compartir ideas. Cuando te encuentres en una llamada grupal, manten tu microfono silenciado. \r\n\r\n*Al final de este diálogo podras observar un ejemplo de una conexión exitosa a una sala de audio.*')
               .setImage('https://i.imgur.com/1jMk5UX.png')
@@ -131,6 +130,68 @@ module.exports = {
               return message.channel.send(exampleEmbed);
 
             }
+
+            if (args[0] === 'audio+') {
+
+              const Discord = require('discord.js');
+              const exampleEmbed = new Discord.MessageEmbed()
+              .setColor('#5b34eb')
+            	.setTitle('¡Aquí está la información de solución a los problemas de audio! :tools: :speaker:')
+            	.setThumbnail('https://i.imgur.com/nFao1cI.jpeg')
+              .setDescription('*__"No escucho nada durante una llamada"__* :bulb: Revisa que tengas seleccionadas tus bocinas y micrófono activos. Entra al menú Preferencias de Usuario / Audio y Video y en las opciones dispositivo de entrada y de salida selecciona tu dispositivo de auido. Puedes abrir el menú preferencias de usuales con el símbolo :gear: que aparece abajo a la izquierda en Discord, justo por debajo de la lista de #canales.\r\n\r\n*__"Escucho a los demás en la llamada pero con poco volúmen"__* :bulb: Desde la lista de usuarios conectados al canal de audio, da click derecho en el usuario que no logres escuchar con suficiente intensidad y aumenta el volúmen hasta 200%. Puedes revisar también tus preferencias de Audio y Video y subir el volúmen general a %200. \r\n\r\n *__"Escucho con suficiente intensidad el sonido, pero se corta mucho"__* :bulb: En este caso el problema puede ser una mala conexión a internet por parte del locutor o receptor, intenta acercarte el modem o a un lugar con mayor señal o bien utilizar el cable Ethernet para conectarte a internet. \r\n\r\n"__*Mi problema no se encuentra dentro de los anteriores o no se solucionó a pesar de estas instrucciones*__" :bulb: En ocasiones pueden ocurrir problemas poco frecuentes que no hayan sido considerados en este diálogo, en este caso ponte en contacto con un tutor para resolver esta situación.')
+              .setImage('https://i.imgur.com/IHhhuWw.png','https://i.imgur.com/prs2vXl.png')
+              .setTimestamp()
+            	.setFooter('*Si estás buscando cómo utilizar el radio, puedes intentar el comando $ayuda radio. ¡Nada de poner música fea!*');
+
+              return message.channel.send(exampleEmbed);
+
+            }
+
+            if (args[0] === 'radio') {
+
+              const Discord = require('discord.js');
+              const exampleEmbed = new Discord.MessageEmbed()
+              .setColor('#5b34eb')
+              .setTitle('¡Aquí está la información de utilización del radio! :radio:')
+              .setThumbnail('https://i.imgur.com/nFao1cI.jpeg')
+              .setDescription('Conéctate al canal de voz radio para escuchar música. Una vez conectado, inicia el reproductor escribiendo en el canal de texto #radio el comando `-play` más el nombre del artista, canción, álbum o playlist y comenzará a reproducirse. Con el comando `-help` puedes ver los comandos disponibles para el reproductor.  \r\n \r\n *Dato: también te puedes conectar a alguna de las Salas de CLUB SOCIAL para platicar o comentar la música, etcétera.*')
+              .setTimestamp()
+              .setFooter('*Si no puedes conectarte a las salas de audio, escuchar o enviar sonido intenta el comando $ayuda audio+ para ver soluciones a problemas comunes.*');
+
+              return message.channel.send(exampleEmbed);
+
+            }
+
+
+          if (args[0] === 'juegos') {
+
+            const Discord = require('discord.js');
+            const exampleEmbed = new Discord.MessageEmbed()
+            .setColor('#5b34eb')
+            .setTitle('¡Aquí está la información de las salas de juegos! :video_game: ')
+            .setThumbnail('https://i.imgur.com/nFao1cI.jpeg')
+            .setDescription('En los canales de la categoría Juegos puedes encontrarte con otr@s compañera@s que comparten el amor por los juegos. \r\n :robot: **#botland** Un juego de Rol basado en comandos. \r\n :dragon: **#dragons-n-dungeons** ¡Únete a nuestra mesa de juego y vive aventuras épicas en tu imaginación! \r\n :billed_cap: **#pokemon** Gotta catch ‘em all!. \r\n\r\n*Utiliza el #club-gamer para compartir tu nombre de usuario en otras plataformas (PS4, Xbox, Steam, LoL, Blizzard, Nintendo, etc.) de manera que l@s demás podamos localizarte y jugar contigo.*')
+            .setTimestamp()
+            .setFooter('*Para empezar a jugar en #botland escribe en ese canal el comando `rpg tutorial`*');
+
+            return message.channel.send(exampleEmbed);
+
+          }
+
+          if (args[0] === 'admin') {
+
+            const Discord = require('discord.js');
+            const exampleEmbed = new Discord.MessageEmbed()
+            .setColor('#5b34eb')
+            .setTitle('¡Información para la resolución de problemas no académicos! :tools: ')
+            .setThumbnail('https://i.imgur.com/nFao1cI.jpeg')
+            .setDescription('@Alida#3470 es la persona encargada de #control-escolar. Hay que dirigirse a ella mediante el chat correspondiente cuando tengas problemas o dudas respecto a pagos, inscripciones, accesos, materias y demás cosas técnicas que se te puedan presentar en la plataforma.')
+            .setTimestamp()
+            .setFooter('*Recuerda que puedes contactar a todos los tutores por medio del correo institucional, ¡aunque tal vez los encuentres más rápido por aquí!*');
+
+            return message.channel.send(exampleEmbed);
+
+          }
 
 
 
