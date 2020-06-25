@@ -1,1 +1,40 @@
-Navegar a este directorio y ejecutar "Node index.js" para poner en marcha el bot
+_____________________________________________
+__   __     ______     ______     ______
+/\ "-.\ \   /\  == \   /\  __ \   /\__  _\
+\ \ \-.  \  \ \  __<   \ \ \/\ \  \/_/\ \/
+\ \_\\"\_\  \ \_____\  \ \_____\    \ \_\
+ \/_/ \/_/   \/_____/   \/_____/     \/_/
+
+
+__________   N.BOT (NUESTRO BOT)   __________
+
+// INTRODUCCIÓN:
+
+Se trata de un proyecto colaborativo con el objetivo de crear un Bot de Discord customizable que se adapte a las necesidades de los desarrolladores.
+Este bot es un programa realizado con javascript y discordjs. Discordjs es una librería de node.js que le permite a este programa conectarse con la API de Discord. Visita la página oficial del proyecto para más información. (https://discord.js.org/#/)
+
+// COLABORACIÓN:
+
+Para programadores: Necesitarás conocimientos generales de lógica de programación y también es recomendable que si no estás familiarizado con javascript consultes algún video tutorial de sintaxis básica de este lenguaje. Documentación y tutoriales para desarrolladores: Documentación oficial de Discordjs https://discordjs.guide/, Videotutorial "Bot de Discord con Discordjs de 0 a 100" https://youtu.be/EUB777JJT5E, Videotutorial "Javascript para principiantes" https://youtu.be/RqQ1d1qEWlE
+
+1. Interactua con NBOT en algún servidor de Discord donde se encuentre activo con el comando $dev tutorial.
+
+2. Revisa toda la documentación disponible e íntegrate al equipo de trabajo en distintos roles.
+
+
+Para usuarios: Si no estás familiarizado o no te interesa la programación igual puedes colaborar con el desarrollo de este bot a través de redactar texto para comandos, ideas de funciones, diagramas de flujo, etc. Si nunca haz programado pero te interesa aprender, este proyecto es un excelente lugar para iniciar ya que se trata de un lenguaje de programación fácil de entender y utilizar.
+
+1. Interactua con NBOT en algún servidor de Discord donde se encuentre activo con el comando $dev tutorial.
+
+2. Revisa la documentación disponible para usuarios y comparte tus propuestas e ideas de códigos en esta carpeta: https://drive.google.com/drive/folders/1DAobzwB4rmzphsrdkSBOSsZhM1UayUa6?usp=sharing
+
+
+// UTILIZACIÓN:
+
+1. Instala NodeJs, Descarga esta carpeta y descomprímela en tu ordenador.
+
+2. Crea un bot de discord en https://discord.com/developers/applications, invítalo al Servidor de Desarrollo (https://discord.gg/6FCVd6T) y copia el token secreto en el archivo "bot.js".
+
+3. En una terminal navega a la ubicación de la carpeta con el archivo "bot.js", instala discordjs y ejecuta "node bot.js"
+
+4. En el canal de #pruebas, interactúa con tu bot.
