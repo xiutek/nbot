@@ -45,7 +45,7 @@ module.exports = {
 
       		}
 
-          if (args[0] === 'Framework') {
+          if (args[0] === 'framework') {
 
             const Discord = require('discord.js');
             const exampleEmbed = new Discord.MessageEmbed()
@@ -68,6 +68,28 @@ module.exports = {
       channel.send(exampleEmbed);
 
             }
+
+            if (args[0] === 'idea') {
+
+              const Discord = require('discord.js');
+              const exampleEmbed = new Discord.MessageEmbed()
+        .setColor('#44bcd8')
+        .setTitle('¡Aquí están las recomendaciones! :bulb:')
+        .setDescription('Entra a la siguientes ligas para realizar tus propuestas de código')
+        .addFields(
+          { name: 'Ejemplo de Propuesta', value: 'Encargado de recuperar propuestas de código de usuarios en la carpeta SOLICITUDES y codificarlas para ser leídas como comandos en el bot en la carpeta TEST', inline: true },
+          { name: 'Tester', value: 'Encargado de recuperar los comandos creados por Coder en la carpeta TEST y verificar que sean estables y que bot.js siga siendo ejecutable, agregandolos a la carpeta VERSION', inline: true },
+          { name: 'Master', value: 'Encargado de verificar la estabilidad de la VERSION', inline: true },
+
+        )
+        .setThumbnail('https://i.imgur.com/2UMkL5N.png')
+        .setTimestamp()
+        .setFooter('*¡Nunca es tarde para aprender algo nuevo y nunca sobran las manos en este proyecto!*');
+
+        return message.channel.send(exampleEmbed);
+        channel.send(exampleEmbed);
+
+              }
 
 
 

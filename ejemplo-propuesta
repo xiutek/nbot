@@ -1,0 +1,21 @@
+// EJEMPLO DE PROPUESTA
+
+
+
+COMANDO: $ayuda discord
+
+PROPÓSITO: Regresa al usuario una serie de recomendaciones sobre Discord \r\nUtilizar "\r\n" para insertar una nueva linea, no utilziar enter
+
+TEXTO:
+
+1. (Título) ¡Aquí están las recomendaciones! :bulb:
+
+2. (Color) #5b34eb
+
+3. (Contenido) :one:  Puedes silenciar canales y categorías de los cuales no te interese recibir notificaciones dando click derecho en la lista de la izquierda, de la misma forma puedes volver a activar las notificaciones.  :zzz: \r\n :two: Puedes buscar mensajes, usuarios, canales, personas con el ícono de la lupa. :mag_right:  \r\n :three: Puedes ver mensajes marcados cómo relevantes por los tutores y administradores con el ícono de la tachuela. :pushpin:  \r\n :four: Utiliza el #chat-principal para compartir contenido relevante y de interés general a toda la comunidad de Prepaenlinea.mx :star: \r\n :five: Localiza los canales de las materias que estés cursando actualmente y mantente al pendiente de las notificaciones en el canal de #avisos .  :pencil: \r\n :six: Localiza los canales sociales donde podrás encontrar foros etiquetados por intereses, actividades y juegos de la comunidad.  :crossed_swords:  \r\n :seven: Participa mucho y en todo momento observa el #reglamento del servidor.  :crown:  \r\n
+
+4. (Imagen)  https://myserver.com/imagen.png
+
+5. (Comentario) Si esta aydua no ha sido suficiente, intenta `$ayuda`
+
+INTERACCIONES: Me gustaría que saliera solo una recomendacion pero que el usuario respondiera con una reacción para que saliera la siguiente
