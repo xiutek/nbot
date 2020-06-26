@@ -13,7 +13,7 @@ module.exports = {
   .setAuthor('Página oficial de DiscordJs (Click Aquí)', 'https://discord.js.org/static/logo-square.png', 'https://discord.js.org')
 	.setDescription('Este bot es un programa realizado con javascript y discordjs. Discordjs es una librería de node.js que le permite a este programa conectarse con la API de Discord. Visita la página oficial del proyecto para más información. Utiliza los siguientes comandos para obtener más información:')
   .addFields(
-    { name: ':grey_question: Comanandos para desarrolladores:', value: '`$dev ayuda`, `$dev tutorial`, `$dev framework`, `$dev ejemplo`, `$dev git`,  `$dev push`, `$dev pull`, `$dev request`, `$dev ver`, `$ayuda juegos` ', inline: true },
+    { name: ':grey_question: Comanandos para desarrolladores:', value: '`$dev ayuda`, `$dev tutorial`, `$dev framework`, `$dev idea`, `$dev git`,', inline: true },
 
   )
 	.setThumbnail('https://i.imgur.com/2UMkL5N.png')
@@ -58,6 +58,8 @@ module.exports = {
         { name: 'Coder', value: 'Encargado de recuperar propuestas de código de usuarios en la carpeta SOLICITUDES y codificarlas para ser leídas como comandos en el bot en la carpeta TEST', inline: true },
         { name: 'Tester', value: 'Encargado de recuperar los comandos creados por Coder en la carpeta TEST y verificar que sean estables y que bot.js siga siendo ejecutable, agregandolos a la carpeta VERSION', inline: true },
         { name: 'Master', value: 'Encargado de verificar la estabilidad de la VERSION', inline: true },
+        { name: '\u200B', value: '= = = = = = = = = = =' },
+        { name: 'Carpeta de Drive', value: 'https://drive.google.com/drive/folders/1_BEa7Xb6vrwThRFcrTV99VAO05-6y4yz?usp=sharing', inline: true },
 
       )
       .setThumbnail('https://i.imgur.com/2UMkL5N.png')
@@ -77,9 +79,8 @@ module.exports = {
         .setTitle('¡Aquí están las recomendaciones! :bulb:')
         .setDescription('Entra a la siguientes ligas para realizar tus propuestas de código')
         .addFields(
-          { name: 'Ejemplo de Propuesta', value: 'Encargado de recuperar propuestas de código de usuarios en la carpeta SOLICITUDES y codificarlas para ser leídas como comandos en el bot en la carpeta TEST', inline: true },
-          { name: 'Tester', value: 'Encargado de recuperar los comandos creados por Coder en la carpeta TEST y verificar que sean estables y que bot.js siga siendo ejecutable, agregandolos a la carpeta VERSION', inline: true },
-          { name: 'Master', value: 'Encargado de verificar la estabilidad de la VERSION', inline: true },
+          { name: 'Ejemplo de Propuesta', value: 'https://github.com/xiutek/nbot/blob/master/ejemplo-propuesta', inline: true },
+          { name: 'Carpeta SOLICITUDES', value: 'https://drive.google.com/drive/folders/1DAobzwB4rmzphsrdkSBOSsZhM1UayUa6?usp=sharing', inline: true },
 
         )
         .setThumbnail('https://i.imgur.com/2UMkL5N.png')
@@ -90,6 +91,11 @@ module.exports = {
         channel.send(exampleEmbed);
 
               }
+
+              if (args[0] === 'git') {
+
+                return message.channel.send('Repositorio del proyecto: `https://github.com/xiutek/nbot`. Solicita ser agregado como colaborador para un mejor manejo de las versiones.');
+            		}
 
 
 
