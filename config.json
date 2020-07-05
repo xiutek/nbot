@@ -1,5 +1,5 @@
 {
 	"prefix": "$",
-	"token": "NzI0NzI1NzUyMzUxOTQ4ODIw.XvU_Dg.XuwyeFzhEM3rif0qZsjlprFCJdU",
+	"token": process.env.KEY,
   "secreto": "De amor"
 }
